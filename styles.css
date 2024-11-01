@@ -1,0 +1,290 @@
+body {
+    font-family: Kelly Slab, sans-serif;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    gap: 0;
+    grid-template-areas:
+        "header-setting navigation navigation"
+        "header-setting description exposition"
+        "social last last";
+}
+
+.header-setting{
+    grid-area: header-setting;
+    background-color: #200B31;
+    padding: 50px 26px 62px 26px;
+}
+
+.header-title{
+    font-size: 96px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 54px;
+}
+
+.logo{
+    width: 176px;
+}
+
+.search-box{
+    font-family: Kelly Slab, sans-serif;
+    font-size: 16px;
+    width: 328px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.search-box:hover,
+.search-box:focus{
+    border-color: #690075;
+    box-shadow: 0 0 5px rgba(109, 0, 193, 0.5);
+    transition: border-color 0.3s ease-in-out;
+}
+    
+
+
+.navigation{
+    grid-area: navigation;
+    background-color: #280841;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 130px 75px 131px 75px;
+}
+
+.navigation-list{
+    display: flex;
+    gap: 75px;
+}
+
+.navigation-items{
+    font-size: 64px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.navigation-items:hover,
+.navigation-items:focus{
+    color: #7b00df;
+    transform: scale(1.05);
+}
+
+
+
+
+.description{
+    grid-area: description;
+    background-color: #330756;
+    padding: 20px 50px 31px 50px;
+}
+
+.description-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.description-text{
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.image-description{
+    width: 260px;
+}
+
+
+
+
+.exposition{
+    grid-area: exposition;
+    background-color: #3B0268;
+    padding: 20px 50px 21px 50px;
+}
+
+.about-exposition{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.exposition-text{
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.exposition-list{
+    display: flex;
+    gap: 25px;
+}
+
+.exposition-photo{
+    width: 110px;
+    height: 150px;
+}
+
+
+
+
+
+
+.social{
+    grid-area: social;
+    background-color: #270541;
+    padding: 46px 30px 100px 30px;
+}
+
+.social-title{
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.social-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+}
+
+.social-list li {
+    width: 50px;
+    height: 50px;
+    background-color: #330756;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-list li:hover{
+    background-color: rgb(25, 0, 26);
+}
+
+
+
+.last{
+    grid-area: last;
+    background-color: #200B31;
+    padding: 20px
+}
+
+.about-last{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.last-title{
+    font-size: 88px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.last-text{
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.where-we{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-add{
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.footer-adress{
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+}
+
+@media (max-width: 1439px) and (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header-setting header-setting"
+            "navigation navigation"
+            "description exposition"
+            "social social"
+            "last last";
+    }
+   .navigation-items {
+        font-size: 54px;
+    }
+
+    .navigation-list {
+         gap: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header-setting"
+            "navigation"
+            "description"
+            "exposition"
+            "social"
+            "last";
+    }
+    .header-title {
+        font-size: 76px;
+    }
+    .social{
+        padding: 80px 30px 100px 30px;
+    }
+    .social-title{
+        font-size: 48px;
+    }
+    .navigation{
+        padding: 130px 55px 131px 55px;
+    }
+    .navigation-items {
+        font-size: 24px;
+    }
+    .navigation-list {
+        gap: 25px;
+    }
+    .exposition-photo {
+        width: 110px;
+        height: 120px;
+    }
+    .last-title{
+        font-size: 76px;
+    }
+    .last-text{
+        font-size: 18px;
+    }
+    .footer-adress{
+        font-size: 18px;
+    }
+}
